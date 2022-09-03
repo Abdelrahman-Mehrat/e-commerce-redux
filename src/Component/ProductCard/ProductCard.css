@@ -1,0 +1,5 @@
+.product-card{
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.10);
+-webkit-box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.10);
+-moz-box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.10);
+}
