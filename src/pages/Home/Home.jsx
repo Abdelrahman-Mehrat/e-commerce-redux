@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import HomeSidebar from "../../Component/HomeSidebar/HomeSidebar";
 import ProductsContainer from "../../Component/ProductsContainer/ProductsContainer";
+import PopupModal from "../popupModal/PopupModal"
 import "./Home.css"
 const Home = ()=>{
     const [data, setData] = useState();
@@ -15,6 +16,7 @@ const Home = ()=>{
                 <HomeSidebar/>
                 <ProductsContainer data={data}/>
             </div>
+            <PopupModal/>
         </section>
     )
 }

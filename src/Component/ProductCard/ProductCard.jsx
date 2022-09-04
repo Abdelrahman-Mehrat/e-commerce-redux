@@ -5,16 +5,16 @@ const ProductCard=({data})=>{
             {data?.map((singleProduct) => (
                 <div className=" col-md-4 p-3" id={singleProduct.id} key={singleProduct.id}>
             <div className="card product-card h-100">
-              <div className="text-center">
+              <div className="text-center p-1">
                 <img src={singleProduct.url} />
               </div>
               <div className="card-body">
-                <h3>
+                <p className="card-title">
               {singleProduct.title}
-                </h3>              
+                </p>              
               </div>
-              <div class="card-footer">
-        <small class="text-muted">{singleProduct.category}</small>
+              <div className="card-footer">
+        <small className="text-muted">{singleProduct.category}</small>
       </div>
             </div>
                 </div>
