@@ -1,23 +1,27 @@
 import { useEffect, useState } from "react";
 import HomeSidebar from "../../Component/HomeSidebar/HomeSidebar";
 import ProductsContainer from "../../Component/ProductsContainer/ProductsContainer";
-import PopupModal from "../popupModal/PopupModal"
-import "./Home.css"
-const Home = ()=>{
-    const [data, setData] = useState();
-    useEffect(() => {
-      fetch("http://localhost:5000/products")
-        .then((response) => response.json())
-        .then((data) => setData(data));
-    }, []);
-    return(
-        <section>
-            <div className="home-container mx-auto container">
-                <HomeSidebar/>
-                <ProductsContainer data={data}/>
-            </div>
-            <PopupModal/>
-        </section>
-    )
-}
+import PopupModal from "../popupModal/PopupModal";
+import "./Home.css";
+import { useDispatch } from "react-redux";
+import { getAllProducts } from "../../redux/fetchProductsSlice";
+const Home = () => {
+  const dispatch = useDispatch();
+  const [name, setName] = useState("name");
+  useEffect(() => {
+    fetch("http://localhost:5000/products")
+      .then((response) => response.json())
+      .then((data) => dispatch(getAllProducts({ data: data })));
+  }, []);
+
+  return (
+    <section>
+      <div className="home-container mx-auto container">
+        <HomeSidebar />
+        <ProductsContainer />
+      </div>
+      <PopupModal />
+    </section>
+  );
+};
 export default Home;

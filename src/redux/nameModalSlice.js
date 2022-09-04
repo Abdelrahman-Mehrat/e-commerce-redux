@@ -1,17 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 export const nameModal = createSlice({
-  name: 'usermodal',
-  initialState :{
-    show: true
+  name: "usermodal",
+  initialState: {
+    show: false,
   },
   reducers: {
-    // changeUserName:(state)=>{
-    //     state.name = "Abdo2"
-    // },
     toggleModal: (state) => {
-        state.show = !state.show
-      }
+      state.show = !state.show;
+    },
   },
-})
-export const {toggleModal,changeNameWithValue} = nameModal.actions
-export default nameModal.reducer
+});
+export const { toggleModal, changeNameWithValue } = nameModal.actions;
+export default nameModal.reducer;
