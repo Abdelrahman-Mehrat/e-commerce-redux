@@ -7,6 +7,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ProductDetails from "./pages/productDesc/ProductDetails";
 function App() {
 
 
@@ -16,8 +17,8 @@ function App() {
       <BrowserRouter>
       <MainNavbar/>
     <Routes>
-      <Route path="/" element={<Home/>}>
-      </Route>
+      <Route path="/" exact element={<Home/>} />
+      <Route path="/product/:id" element={<ProductDetails/> }/>
     </Routes>
   </BrowserRouter>
       </>

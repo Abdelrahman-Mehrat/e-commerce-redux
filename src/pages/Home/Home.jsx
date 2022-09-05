@@ -13,10 +13,9 @@ const Home = () => {
       .then((response) => response.json())
       .then((data) => dispatch(getAllProducts({ data: data })));
   }, []);
-
   return (
     <section>
-      <div className="home-container mx-auto container">
+      <div className="home-container mx-auto ">
         <HomeSidebar />
         <ProductsContainer />
       </div>

@@ -1,4 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
+ function randomizeArray(array) {
+        let RandomProducts = array.map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value)
+        return RandomProducts
+    }
+    function filterProducts(products,filterWord){
+      const filteredproducts = products.filter(
+        (e) => e.category == filterWord
+      );
+      return filteredproducts
+    }
 export const fetchProduct = createSlice({
   name: "usermodal",
   initialState: {
@@ -7,17 +19,18 @@ export const fetchProduct = createSlice({
   },
   reducers: {
     getAllProducts: (state, action) => {
-      state.products = action.payload.data;
+      let RandomProducts = randomizeArray(action.payload.data)
+      state.products = RandomProducts;
     },
     getfilteredData: (state, action) => {
       const filterWord = action.payload.e;
-      const filteredProducts = action.payload.products.filter(
-        (e) => e.category == filterWord
-      );
+      const productsBeforeFilter =action.payload.products
+      const filteredProducts = filterProducts(productsBeforeFilter,filterWord)
       state.filteredProducts = filteredProducts;
       console.log(filteredProducts);
     },
   },
 });
+
 export const { getAllProducts, getfilteredData } = fetchProduct.actions;
 export default fetchProduct.reducer;

@@ -1,0 +1,23 @@
+.main-sidebar{
+    background-color: #111111;
+    border-right: 4px solid #9ED2C6;
+    padding: 5px 10px;
+    color: white;
+}
+.category-dropdown{
+    margin-top: 20px;
+}
+.main-sidebar_fixed{
+    position: fixed;
+}
+@media screen and (max-width:767px) {
+    .main-sidebar{
+        text-align: center;
+        padding: 10px 5px;
+        border: none;
+        border-bottom: 4px solid #9ED2C6;
+    }
+    .main-sidebar_fixed{
+        position: relative;
+    }
+}

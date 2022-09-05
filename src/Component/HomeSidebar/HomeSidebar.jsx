@@ -11,9 +11,11 @@ const HomeSidebar = () => {
     dispatch(getfilteredData({ e, products }));
   };
   return (
-    <section>
+    <section className="main-sidebar">
+      <div className="main-sidebar_fixed">
+
       <h3>Choose Category</h3>
-      <Dropdown onSelect={handleSelect}>
+      <Dropdown onSelect={handleSelect} className="category-dropdown">
         <Dropdown.Toggle id="dropdown-button-dark-example1" variant="secondary">
           Category
         </Dropdown.Toggle>
@@ -21,11 +23,14 @@ const HomeSidebar = () => {
         <Dropdown.Menu variant="dark">
           <Dropdown.Item eventKey="shirts">shirts</Dropdown.Item>
           <Dropdown.Item eventKey="pants">pants</Dropdown.Item>
-          <Dropdown.Item eventKey="watches">watches</Dropdown.Item>
-          <Dropdown.Divider />
+          <Dropdown.Item eventKey="watch">watches</Dropdown.Item>
           <Dropdown.Item eventKey="shoes">shoes</Dropdown.Item>
+          <Dropdown.Divider />
+          <Dropdown.Item eventKey="">All Products</Dropdown.Item>
+
         </Dropdown.Menu>
       </Dropdown>
+      </div>
     </section>
   );
 };

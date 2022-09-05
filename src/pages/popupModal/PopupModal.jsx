@@ -23,9 +23,7 @@ function LoginModal() {
   };
   return (
     <>
-      <Button variant="primary" onClick={toggleModal}>
-        Launch demo modal
-      </Button>
+      
       <Modal show={show} onHide={() => dispatch(toggleModal())}>
         <Modal.Header closeButton>
           <Modal.Title>Hi, Login with your first name</Modal.Title>
