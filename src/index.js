@@ -6,9 +6,7 @@ import {store} from "./redux/store"
 import App from "./App";
 import 'bootstrap/dist/css/bootstrap.min.css';
 // fonts
-import './fonts/Oxygen/Oxygen-Light.ttf';
-import './fonts/Oxygen/Oxygen-Regular.ttf';
-import './fonts/Oxygen/Oxygen-Bold.ttf';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
