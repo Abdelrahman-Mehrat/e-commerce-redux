@@ -31,6 +31,5 @@ export const fetchProduct = createSlice({
     },
   },
 });
-
 export const { getAllProducts, getfilteredData } = fetchProduct.actions;
 export default fetchProduct.reducer;

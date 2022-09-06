@@ -8,6 +8,7 @@ import {
   Route,
 } from "react-router-dom";
 import ProductDetails from "./pages/productDesc/ProductDetails";
+import ShoppingPage from "./pages/shoppingPage/ShoppingPage";
 function App() {
 
 
@@ -19,6 +20,7 @@ function App() {
     <Routes>
       <Route path="/" exact element={<Home/>} />
       <Route path="/product/:id" element={<ProductDetails/> }/>
+      <Route path="/shopping" element={<ShoppingPage/> }/>
     </Routes>
   </BrowserRouter>
       </>

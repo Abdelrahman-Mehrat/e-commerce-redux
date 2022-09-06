@@ -1,0 +1,31 @@
+.ShoppingPage{
+    background-color: #ebebeb;
+    min-height: 100vh;
+}
+.ShoppingPage .container{
+    background-color: white;
+    min-height: 100vh;
+}
+.subtitle-container{
+    border: 2px solid grey;
+    border-top: none;
+}
+.subtitle-container .subtitle-card{
+    background-color: #ebebeb;
+    border-radius: 10px;
+    padding: 7px 5px;
+}
+.subtitle-container .subtitle-card p{
+    margin-bottom: 0px;
+}
+.subtitle-container .subtitle-card p:first-of-type{
+    margin-bottom: 10px;
+}
+.subtitle-card .subtitle_btn{
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+    border-radius: 4px;
+    color: white;
+
+}

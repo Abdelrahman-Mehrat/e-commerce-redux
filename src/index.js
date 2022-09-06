@@ -6,9 +6,6 @@ import {store} from "./redux/store"
 import App from "./App";
 import 'bootstrap/dist/css/bootstrap.min.css';
 // fonts
-
-
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
