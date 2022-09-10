@@ -7,6 +7,11 @@
   -moz-box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.1);
   background-color: rgb(255 145 0 / 10%) !important;
   cursor: pointer;
+  transition: 0.3s;
+}
+.product-card:hover {
+  transform: scale(1.01);
+  background-color:   rgb(255 145 0 / 25%) !important;
 }
 .card_img-container img {
   width: 100%;

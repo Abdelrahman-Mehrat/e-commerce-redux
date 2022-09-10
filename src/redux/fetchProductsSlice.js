@@ -19,8 +19,8 @@ export const fetchProduct = createSlice({
   },
   reducers: {
     getAllProducts: (state, action) => {
-      // let RandomProducts = randomizeArray(action.payload.data)
-      state.products = action.payload.data;
+      let RandomProducts = randomizeArray(action.payload.data)
+      state.products = RandomProducts;
     },
     getfilteredData: (state, action) => {
       const filterWord = action.payload.e;

@@ -1,8 +1,8 @@
 .main-sidebar{
-    background-color: #111111;
+    background-color: #fff0dc;
     border-right: 4px solid #9ED2C6;
     padding: 5px 10px;
-    color: white;
+    color: #161616;
 }
 .category-dropdown{
     margin-top: 20px;
