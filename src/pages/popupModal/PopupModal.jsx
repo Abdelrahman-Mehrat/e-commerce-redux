@@ -11,13 +11,11 @@ function LoginModal() {
   const show = useSelector((state) => state.toggleModal.show);
 
   // Update Username in Redux
-  console.log(show);
   const inputUsername = useRef("");
   const name = useSelector((state) => state.toggleModal.name);
   const dispatch = useDispatch();
   const changeName = (e) => {
     e.preventDefault();
-    console.log(inputUsername.current.value);
     dispatch(changeNameWithValue(inputUsername.current.value));
     dispatch(toggleModal());
   };

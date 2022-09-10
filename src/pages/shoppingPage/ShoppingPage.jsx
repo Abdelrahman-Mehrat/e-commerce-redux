@@ -1,17 +1,14 @@
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ShoppingCartProduct from "../../Component/shoppingCartProduct/ShoppingCartProduct";
+import { removeAllCart } from "../../redux/shoppingSlice";
 import "./ShoppingPage.css"
 const ShoppingPage=()=>{
     const shopList = useSelector((state)=>state.shoppingCart.shoppingProducts)
     const totalPrice = useSelector((state)=>state.shoppingCart.shoppingTotalPrice)
-    
     const productsQuantity = useSelector((state)=>state.shoppingCart.shoppingQuantity)
+    const dispatch = useDispatch()
 
-    useEffect(()=>{
-    console.log("test shopping");
-    console.log(shopList);
-    },[])
     return(
         <section className="ShoppingPage">
             <div className="container">
@@ -20,11 +17,15 @@ const ShoppingPage=()=>{
                             <h3>Shopping Cart</h3>
                             <div>
                                 {
+                                    shopList.length > 0 ?
                                     shopList.map((singleShopCart)=>{
                                         return(
+                                            
                                             <ShoppingCartProduct singleShopCart={singleShopCart}/>   
                                         )
                                     })
+                                    :
+                                    <p>No items to show</p>
                                 }
                             </div>
                         </div>
@@ -34,6 +35,7 @@ const ShoppingPage=()=>{
                                 <p>Total items : {productsQuantity}</p>
                                 <p>Total Price : {totalPrice}$</p>
                                 <button className="add-to-card-btn subtitle_btn mt-3">Buy</button>
+                            <button className="remove_btn mt-3" onClick={()=>{dispatch(removeAllCart())}}>Delete All items</button>
                             </div>
                         </div>
                     </div>

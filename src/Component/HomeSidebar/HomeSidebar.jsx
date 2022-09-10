@@ -7,7 +7,6 @@ const HomeSidebar = () => {
   const products = useSelector((state) => state.fetchProduct.products);
   const dispatch = useDispatch();
   const handleSelect = (e) => {
-    console.log(e);
     dispatch(getfilteredData({ e, products }));
   };
   return (
