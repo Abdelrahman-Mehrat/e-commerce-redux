@@ -14,13 +14,12 @@ const ProductCard = () => {
     (state) => state.fetchProduct.filteredProducts
   );
   const dispatch = useDispatch();
-  // add to card function
+  // Add to list function
   const favIconFunc=(e)=>{
     e.stopPropagation();
    }
    const addToCard=(e,payload)=>{
     e.stopPropagation();
-    console.log("add Shopping y3boda");
     dispatch(addToCart(payload));
     // navigate(`./shopping`);
     
@@ -42,7 +41,7 @@ const navigate = useNavigate()
   return (
     <>
 <Alert show={show} key={"info"} variant={"info"} className="addCard_alert" >
-              card added  
+              Product added to cart
     </Alert>
       {
         filteredProducts.length > 0 
@@ -65,7 +64,7 @@ const navigate = useNavigate()
             <div className="card-footer">
               <small className="text-muted">Category: {singleProduct.category}</small>
             </div>
-          <button className="add-to-card-btn"  onClick={(e) => { addToCard(e,singleProduct)}}>Add to card </button>
+          <button className="add-to-card-btn"  onClick={(e) => { addToCard(e,singleProduct)}}>Add to list </button>
           </div>
         </div>
         ))
@@ -87,7 +86,7 @@ const navigate = useNavigate()
             <div className="card-footer">
               <small className="text-muted">Category: {singleProduct.category}</small>
             </div>
-          <button className="add-to-card-btn"  onClick={(e) => { addToCard(e,singleProduct)}}>Add to card </button>
+          <button className="add-to-card-btn"  onClick={(e) => { addToCard(e,singleProduct)}}>Add to list </button>
           </div>
         </div>
 

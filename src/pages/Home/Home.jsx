@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { getAllProducts } from "../../redux/fetchProductsSlice";
 const Home = () => {
   const dispatch = useDispatch();
-  const [name, setName] = useState("name");
+  
   useEffect(() => {
     fetch("http://localhost:5000/products")
       .then((response) => response.json())

@@ -1,6 +1,6 @@
 import "./shoppingCartProduct.css"
 import { useDispatch } from "react-redux";
-import { removeFromCart } from "../../redux/shoppingSlice";
+import { changeProductQuantity, removeFromCart } from "../../redux/shoppingSlice";
 import { RiDeleteBack2Line } from 'react-icons/ri';
 const ShoppingCartProduct=({singleShopCart})=>{
     // removeFromCart
@@ -24,6 +24,12 @@ const ShoppingCartProduct=({singleShopCart})=>{
             </p>
             </div>
             <button className="remove_btn" onClick={()=>{removeProduct(singleShopCart)}}><RiDeleteBack2Line/> Delete</button>
+           <div className="d-flex justify-content-center algin-items-center g-3">
+            <button onClick={()=>dispatch(changeProductQuantity({"product":singleShopCart,"type":"increment"}))}>+</button>
+            <span>Quantity {singleShopCart.quantity}</span>
+            <button onClick={()=>dispatch(changeProductQuantity({"product":singleShopCart,"type":"decrement"}))}>-</button>
+
+           </div>
            </div>
            <p className="price">{singleShopCart.price}$</p>
         </div>

@@ -1,3 +1,4 @@
+
 .main_navbar .nav_links{
     text-decoration: none;
     padding: 5px 10px;
@@ -10,5 +11,17 @@
 .main_navbar .nav_links:hover{
     background-color:#fff;
     color: #6c757d ;
-
+}
+.Nav_order-icon{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    border: 1px solid white;
+    padding: 0px 4px;
+    border-radius: 5px;
+}
+.Nav_order-icon .nav_quantity{
+    color: #ff8320;
 }
