@@ -1,5 +1,4 @@
-.product-card-wrapper{
-
+.product-card-wrapper {
 }
 .product-card {
   box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.1);
@@ -11,7 +10,7 @@
 }
 .product-card:hover {
   transform: scale(1.01);
-  background-color:   rgb(255 145 0 / 25%) !important;
+  background-color: rgb(255 145 0 / 25%) !important;
 }
 .card_img-container img {
   width: 100%;
@@ -19,10 +18,10 @@
   object-fit: cover;
   object-position: top;
 }
-.card-title{
+.card-title {
   font-size: 1.4rem;
 }
-.card_fav-icon{
+.card_fav-icon {
   position: absolute;
   right: 9px;
   top: 9px;
@@ -31,7 +30,7 @@
   color: white;
   border-radius: 4px;
 }
-.add-to-card-btn{
+.add-to-card-btn {
   background-color: #ff8320;
   border: none;
   color: #101010;
@@ -39,15 +38,28 @@
   font-family: Cairo-Bold;
   font-size: 1.2rem;
 }
-.add-to-card-btn:hover{
+.add-to-card-btn:hover {
   background-color: #ff9947;
 }
-.addCard_alert{
+.addCard_alert {
   position: fixed !important;
-    bottom: 10px;
-    right: 10px;
-    width: -moz-fit-content !important;
-    width: fit-content !important;
-    z-index: 3;
-    font-size: 1.3rem;
+  bottom: 10px;
+  right: 10px;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  z-index: 3;
+  transition: 1s;
+  font-size: 1.3rem;
+}
+.addCard_alert::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 0%;
+  height: 4px;
+  background-color: green;
+}
+.addCard_alert2::after {
+  width: 100%;
 }

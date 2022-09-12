@@ -1,23 +1,30 @@
-.backBtn{
-    padding: 4px 14px;
-    outline: none;
-    border: none;
-    background-color: #094787;
-    color: white;
-    border-radius: 8px;
+.backBtn {
+  padding: 4px 14px;
+  outline: none;
+  border: none;
+  background-color: #094787;
+  color: white;
+  border-radius: 8px;
 }
-.backBtn:hover{
-    background-color: #0e5dab;
-    
+.backBtn:hover {
+  background-color: #0e5dab;
 }
-.backBtn_style{
-    background-color: #ff8320;
-    font-family: "Cairo-Bold";
+.backBtn_style {
+  background-color: #ff8320;
+  font-family: "Cairo-Bold";
 }
-.backBtn_style:hover{
-    background-color: #ff9742;
+.backBtn_style:hover {
+  background-color: #ff9742;
 }
-.product-price{
-    font-size: 2.2rem;
-    font-family: "Cairo-Bold";
+.product-price {
+  font-size: 2.2rem;
+  font-family: "Cairo-Bold";
+}
+.single-product {
+  background-color: #fff9f0;
+  min-height: calc(100vh - 66px);
+}
+.single-product .container {
+  background-color: #fff;
+  min-height: calc(100vh - 66px);
 }

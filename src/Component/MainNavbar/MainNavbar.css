@@ -1,27 +1,26 @@
-
-.main_navbar .nav_links{
-    text-decoration: none;
-    padding: 5px 10px;
-    background-color:#6c757d;
-    margin: 0px 10px;
-    color: white ;
-    border-radius: 4px;
-    transition: 0.3s;
+.main_navbar .nav_links {
+  text-decoration: none;
+  padding: 5px 10px;
+  background-color: #6c757d;
+  margin: 0px 10px;
+  color: white;
+  border-radius: 4px;
+  transition: 0.3s;
 }
-.main_navbar .nav_links:hover{
-    background-color:#fff;
-    color: #6c757d ;
+.main_navbar .nav_links:hover {
+  background-color: #fff;
+  color: #6c757d;
 }
-.Nav_order-icon{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
-    border: 1px solid white;
-    padding: 0px 4px;
-    border-radius: 5px;
+.Nav_order-icon {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
+  border: 1px solid white;
+  padding: 0px 4px;
+  border-radius: 5px;
 }
-.Nav_order-icon .nav_quantity{
-    color: #ff8320;
+.Nav_order-icon .nav_quantity {
+  color: #ff8320;
 }

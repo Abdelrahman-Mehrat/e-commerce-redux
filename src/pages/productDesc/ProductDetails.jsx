@@ -27,18 +27,19 @@ const ProductDetails = () => {
           <div className="col-md-7">
             <div>
               <h2 className="">{selectedProduct?.title}</h2>
-              <p>{selectedProduct?.desc}</p>
-                  <span className="product-price">{selectedProduct?.price}$</span>
+              <p>Details: {selectedProduct?.desc}</p>
+              <span className="product-price">
+                Price: {selectedProduct?.price}$
+              </span>
               <div className="CairoBold d-flex justify-content-between align-items-center mt-3">
-            
                 <button
-              className="backBtn backBtn_style"
-                onClick={() => {
+                  className="backBtn backBtn_style"
+                  onClick={() => {
                     dispatch(addToCart(selectedProduct));
-                }}
-              >
-                Add to cart
-              </button>
+                  }}
+                >
+                  Add to cart
+                </button>
                 <span>
                   <button
                     className="backBtn"
@@ -50,7 +51,6 @@ const ProductDetails = () => {
                   </button>
                 </span>
               </div>
-             
             </div>
           </div>
         </div>
