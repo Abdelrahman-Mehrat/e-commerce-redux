@@ -26,6 +26,10 @@ const MainNavbar = () => {
               <Link className="nav_links secondary" to="/">
                 Home
               </Link>
+              <Link className="nav_links secondary" to="/homeproduct">
+              home product
+              </Link>
+              
               <Link className="nav_links" to="/shopping">
                 Cart
               </Link>

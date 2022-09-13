@@ -1,6 +1,6 @@
 import "./App.css";
 import MainNavbar from "./Component/MainNavbar/MainNavbar";
-import Home from "./pages/Home/Home";
+import HomeProduct from "./pages/HomeProduct/HomeProduct";
 // react router
 import {
   BrowserRouter,
@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import ProductDetails from "./pages/productDesc/ProductDetails";
 import ShoppingPage from "./pages/shoppingPage/ShoppingPage";
+import Home from "./pages/Home/Home";
 function App() {
 
 
@@ -18,8 +19,9 @@ function App() {
       <BrowserRouter>
       <MainNavbar/>
     <Routes>
-      <Route path="/" exact element={<Home/>} />
-      <Route path="/product/:id" element={<ProductDetails/> }/>
+    <Route path="/" exact element={<Home/>} />
+      <Route path="/homeproduct" exact element={<HomeProduct/>} />
+      <Route path="/homeproduct/product/:id" element={<ProductDetails/> }/>
       <Route path="/shopping" element={<ShoppingPage/> }/>
     </Routes>
   </BrowserRouter>

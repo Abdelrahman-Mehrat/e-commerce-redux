@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const navigate = useNavigate();
   const [selectedProduct, setSelectedProduct] = useState();
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${params.id}`)
+    fetch(`http://localhost:5000/homeproduct/products/${params.id}`)
       .then((response) => response.json())
       .then((data) => setSelectedProduct(data));
   }, []);

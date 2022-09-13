@@ -1,0 +1,68 @@
+.Home-page_img{
+    height: 60vh;
+    background-image: url(main-img.jpg);
+    background-size: cover;
+}
+.Home-page_text-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Home-page_text-container .home_btn{
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+.category-cards .category-title{
+    font-family: 'Cairo-Bold';
+    background-color: #e3e3e3;
+    font-size: 2.6rem;
+    padding: 5px 0px;
+}
+.Home-page .category-cards{
+
+}
+.category_card_wrapper {
+    position: relative;
+    height: 304px !important;
+    overflow: hidden;
+}
+.category_card_wrapper:hover .categorytitle{
+opacity: 1;
+}
+.category_card_wrapper .categorytitle{
+    position: absolute;
+    transition: 0.5s;
+    display: flex;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #6a6a6a69;
+    font-size: 2rem;
+    color: white;
+    font-family: 'Cairo-Bold';
+}
+@media screen and (max-width:991px) {
+    .Home-page_img{
+        height: 50vh;
+    }
+   
+    .Home-page_text-container .home_btn{
+        font-size: 1.1rem;
+    }
+}
+@media screen and (max-width:480px) {
+    .Home-page_text-container{
+        display: flex;
+        justify-content: center;
+    }
+    .Home-page_img{
+        height: 40vh;
+    }
+    
+}
