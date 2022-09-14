@@ -15,12 +15,19 @@ export const fetchProduct = createSlice({
   name: "usermodal",
   initialState: {
     products: [],
+    paginateProduct:[],
     filteredProducts: [],
   },
   reducers: {
     getAllProducts: (state, action) => {
       let RandomProducts = randomizeArray(action.payload.data)
       state.products = RandomProducts;
+      state.paginateProduct = state.products.slice(0,9);
+    },
+    getPaginateProducts:(state, action)=>{
+      let stratNumber = (9 * action.payload) -9;
+      let limit = 9 * action.payload;
+      state.paginateProduct = state.products.slice(stratNumber,limit);
     },
     getfilteredData: (state, action) => {
       const filterWord = action.payload.e;
@@ -30,5 +37,5 @@ export const fetchProduct = createSlice({
     },
   },
 });
-export const { getAllProducts, getfilteredData } = fetchProduct.actions;
+export const { getAllProducts, getfilteredData,getPaginateProducts} = fetchProduct.actions;
 export default fetchProduct.reducer;

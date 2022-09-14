@@ -13,6 +13,7 @@ const ProductCard = () => {
   const filteredProducts = useSelector(
     (state) => state.fetchProduct.filteredProducts
   );
+  const paginateProducts = useSelector((state)=>state.fetchProduct.paginateProduct)
   const dispatch = useDispatch();
   // Add to list function
   const favIconFunc = (e) => {
@@ -95,7 +96,7 @@ const ProductCard = () => {
             </div>
           ))
         : // all products
-          products.map((singleProduct) => (
+        paginateProducts.map((singleProduct) => (
             <div
               className="col-lg-4    p-3 col-sm-6"
               id={singleProduct.id}
