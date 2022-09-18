@@ -6,13 +6,13 @@ import PopupModal from "../popupModal/PopupModal";
 import "./HomeProduct.css";
 // Redux
 import { useDispatch, useSelector } from "react-redux";
-import { getAllProducts, getPaginateProducts } from "../../redux/fetchProductsSlice";
+import { getAllProducts} from "../../redux/fetchProductsSlice";
 // pagination
-import Pagination from 'react-bootstrap/Pagination';
 const HomeProduct = () => {
   // Redux
   const dispatch = useDispatch();
   const products = useSelector((state) => state.fetchProduct.products);
+ 
   useEffect(() => {
     if (products.length > 0) return;
     fetch("http://localhost:5000/products")
@@ -22,20 +22,8 @@ const HomeProduct = () => {
     });
   }, []);
  
-  // pagination
-  const filterProducts=(e)=>{
-    dispatch(getPaginateProducts(e.target.innerText))
-    console.log(e.target.innerText)
-  }
-  let active = 1;
-  let items = [];
-  for (let number = 1; number <= (Math.ceil(products.length / 10)); number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === active} onClick={(e)=>{filterProducts(e)}}>
-        {number}
-      </Pagination.Item>,
-    );
-  }
+  
+ 
  
   return (
     <section>
@@ -43,7 +31,7 @@ const HomeProduct = () => {
         <HomeSidebar />
         <ProductsContainer />
       </div>
-      <Pagination>{items}</Pagination>
+      
       <PopupModal />
     </section>
   );

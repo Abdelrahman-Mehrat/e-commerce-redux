@@ -10,10 +10,10 @@ const ProductCard = () => {
   const [show, setShow] = useState(false);
   //Redux
   const products = useSelector((state) => state.fetchProduct.products);
-  const filteredProducts = useSelector(
-    (state) => state.fetchProduct.filteredProducts
+  const reRenderProducts = useSelector(
+    (state) => state.fetchProduct.reRenderProducts
   );
-  const paginateProducts = useSelector((state)=>state.fetchProduct.paginateProduct)
+  // const length = useSelector((state)=>state.fetchProduct.currentPLength)
   const dispatch = useDispatch();
   // Add to list function
   const favIconFunc = (e) => {
@@ -48,55 +48,8 @@ const ProductCard = () => {
       >
         Product added to cart
       </Alert>
-      {filteredProducts.length > 0
-        ? // Filter
-          filteredProducts.map((singleProduct) => (
-            <div
-              className="col-lg-4    p-3 col-sm-6"
-              id={singleProduct.id}
-              key={singleProduct.id}
-            >
-              <div
-                onClick={() => {
-                  navigate(`./product/${singleProduct.id}`);
-                }}
-                className="Link_noStyle card product-card h-100"
-              >
-                <button
-                  className="card_fav-icon"
-                  onClick={(e) => {
-                    favIconFunc(e);
-                  }}
-                >
-                  <BsEmojiSmile />
-                </button>
-                <div className="text-center p-1 card_img-container">
-                  <img src={singleProduct.url} />
-                </div>
-                <div className="card-body">
-                  <p className="card-title CairoBold mb-0 d-flex justify-content-between">
-                    <span>{singleProduct.title}</span>{" "}
-                    <span>{singleProduct.price}$</span>{" "}
-                  </p>
-                </div>
-                <div className="card-footer">
-                  <small className="text-muted">
-                    Category: {singleProduct.category}
-                  </small>
-                </div>
-                <button
-                  className="add-to-card-btn"
-                  onClick={(e) => {
-                    addToCard(e, singleProduct);
-                  }}
-                >
-                  Add to list{" "}
-                </button>
-              </div>
-            </div>
-          ))
-        : // all products
-        paginateProducts.map((singleProduct) => (
+      { // all products
+        reRenderProducts.map((singleProduct) => (
             <div
               className="col-lg-4    p-3 col-sm-6"
               id={singleProduct.id}
