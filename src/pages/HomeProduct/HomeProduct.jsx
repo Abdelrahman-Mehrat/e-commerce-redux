@@ -14,6 +14,8 @@ const HomeProduct = () => {
   const products = useSelector((state) => state.fetchProduct.products);
  
   useEffect(() => {
+    console.log("https://data-ecommerce-production.up.railway.app/products")
+    
     if (products.length > 0) return;
     fetch(`${process.env.REACT_APP_BACKEND_URL}/products`)
     .then((response) => response.json())
