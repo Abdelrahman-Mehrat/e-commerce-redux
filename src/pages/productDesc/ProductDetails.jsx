@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const navigate = useNavigate();
   const [selectedProduct, setSelectedProduct] = useState();
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/homeproduct/products/${params.id}`)
+    fetch(`https://data-ecommerce-production.up.railway.app/homeproduct/products/${params.id}`)
       .then((response) => response.json())
       .then((data) => setSelectedProduct(data));
   }, []);
